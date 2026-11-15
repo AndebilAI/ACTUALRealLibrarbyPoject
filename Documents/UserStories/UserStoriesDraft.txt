@@ -64,6 +64,12 @@ Kot knjižničar želim najti knjigo z vnosom ali skeniranjem ISBN, da hitro obd
 •	Neveljaven ali neobstoječ ISBN sproži razumljivo sporočilo o napaki.
 •	Iskanje deluje z vnosom s tipkovnice.
 
+US-21 Razvrščanje priljubljenih knjig
+Kot član želim razvrstiti knjige po priljubljenosti, da lahko hitro najdem najbolj priljubljene knjige v knjižnici.
+• Priljubljenost knjige se določa na podlagi števila izposoj.
+• Knjige so privzeto razvrščene od najbolj do najmanj priljubljenih.
+• Razvrščanje se samodejno posodablja ob novih izposojah.
+
  C. Izposoja
 
 US-12 Evidenca izposoje
@@ -120,3 +126,137 @@ Kot knjižničar želim izbrisati člana, ki ni več aktiven, da je evidenca ure
 •	Člana z izposojenimi knjigami ali neporavnanimi zamudami ni mogoče izbrisati.
 •	Čakalne liste in rezervacije izbrisanega člana se odstranijo.
 
+US-22 Urejanje podatkov člana
+Kot knjižničar želim urejati podatke obstoječega člana, da so podatki v evidenci vedno pravilni.
+• Knjižničar lahko spremeni ime, priimek, e-poštni naslov in telefonsko številko.
+• E-poštni naslov mora biti veljaven in edinstven.
+• Spremembe se shranijo in prikažejo v evidenci članov.
+
+US-23 Iskanje člana
+Kot knjižničar želim poiskati člana po imenu, priimku ali e-poštnem naslovu, da hitro dostopam do njegovih podatkov.
+• Iskanje omogoča uporabo imena, priimka ali e-poštnega naslova.
+• Iskanje omogoča delna ujemanja.
+• Če član ne obstaja, sistem prikaže ustrezno sporočilo.
+
+E. Uporabniški računi in avtentikacija
+
+US-24 Registracija novega uporabnika
+Kot obiskovalec želim ustvariti uporabniški račun, da lahko uporabljam funkcionalnosti knjižničnega sistema.
+• Registracija zahteva ime, priimek, e-poštni naslov in geslo.
+• Sistem preveri veljavnost in edinstvenost e-poštnega naslova.
+• Po uspešni registraciji uporabnik prejme potrditev.
+
+US-25 Pregled lastnega računa
+Kot član želim pregledati svoj uporabniški račun, da imam dostop do svojih podatkov in aktivnosti v knjižnici.
+• Prikazani so osebni podatki člana.
+• Član lahko vidi trenutno izposojene in rezervirane knjige.
+• Član lahko pregleda svoje pretekle izposoje.
+
+US-26 Prijava in odjava uporabnika
+Kot registrirani uporabnik želim se prijaviti in odjaviti iz sistema, da je moj uporabniški račun zaščiten pred nepooblaščenim dostopom.
+• Prijava zahteva veljaven e-poštni naslov in geslo.
+• Ob napačnih podatkih sistem prikaže sporočilo o napaki.
+• Po uspešni prijavi ima uporabnik dostop do funkcionalnosti glede na svoje pravice.
+• Odjava uporabnika zaključi njegovo aktivno sejo.
+
+US-27 Ponastavitev gesla
+Kot uporabnik, ki je pozabil geslo, želim ponastaviti svoje geslo, da lahko ponovno dostopam do svojega računa.
+• Uporabnik vnese e-poštni naslov, povezan z računom.
+• Sistem pošlje povezavo za ponastavitev gesla.
+• Povezava ima omejeno časovno veljavnost.
+• Po uspešni ponastavitvi se lahko uporabnik prijavi z novim geslom.
+
+F. Obveščanje in komunikacija
+
+US-28 Obvestilo o zamudi
+Kot član želim prejeti obvestilo, ko zamudim rok za vračilo knjige, da pravočasno uredim svoje obveznosti do knjižnice.
+• Obvestilo se pošlje, ko rok za vračilo poteče.
+• Obvestilo vsebuje naslov knjige in datum poteka roka.
+• Obvestilo je poslano na e-poštni naslov člana.
+
+US-29 Komunikacija z administratorjem
+Kot član želim poslati sporočilo administratorju, da lahko zastavim vprašanja ali prijavim težave pri uporabi sistema.
+• Član lahko sestavi in pošlje sporočilo.
+• Sporočilo vsebuje zadevo in vsebino.
+• Administrator lahko prejeta sporočila pregleda.
+• Član prejme potrditev o uspešno poslanem sporočilu.
+
+US-30 Samodejno opozorilo pred iztekom roka
+Kot član želim prejeti opozorilo pred iztekom roka za vračilo knjige, da se lahko pravočasno pripravim na vračilo.
+• Sistem preverja roke vračila aktivnih izposoj.
+• Opozorilo se pošlje pred iztekom roka (npr. dva dni prej).
+• Obvestilo vsebuje naslov knjige in datum vračila.
+• Opozorilo se pošlje samo za knjige, ki še niso bile vrnjene.
+
+G. Priporočila in interakcija s knjigami
+
+US-31 Sistemska priporočila za knjige
+Kot član želim prejemati priporočila za knjige, ki so bile všeč uporabnikom s podobnimi interesi, da odkrijem nove knjige, ki bi me zanimale.
+• Sistem pripravi priporočila na podlagi ocen in izposoj uporabnikov.
+• Priporočila so prikazana na uporabniški strani.
+• Član lahko odpre podrobnosti priporočene knjige.
+• Če ni dovolj podatkov za priporočila, sistem prikaže ustrezno sporočilo.
+
+US-32 Obveščanje o novicah
+Kot član želim prejemati obvestila o novostih in aktualnih dogodkih v knjižnici, da sem seznanjen z dogajanjem.
+• Sistem prikazuje objavljene novice.
+• Vsaka novica vsebuje naslov, vsebino in datum objave.
+• Član lahko odpre in prebere posamezno novico.
+
+US-33 Puščanje kritike pri izposojenih knjigah
+Kot član želim napisati kritiko knjige, ki sem si jo izposodil, da lahko drugim članom predstavim svoje mnenje o njej.
+• Kritiko lahko odda samo član, ki si je knjigo izposodil.
+• Kritika vsebuje besedilo in je povezana z izbrano knjigo.
+• Član lahko svojo kritiko ureja ali izbriše.
+• Kritike so vidne drugim članom.
+
+US-34 Ocenjevanje izposojenih knjig
+Kot član želim oceniti knjigo, ki sem si jo izposodil, da lahko drugim članom pomagam pri izbiri knjig.
+• Oceno lahko odda samo član, ki si je knjigo izposodil.
+• Ocena je podana na določeni lestvici (npr. od 1 do 5).
+• Član lahko svojo oceno spremeni.
+• Sistem prikazuje povprečno oceno knjige.
+
+US-35 Osebni seznam želja (wishlist)
+Kot član želim dodajati knjige na osebni seznam želja, da lahko shranim knjige, ki bi jih želel prebrati v prihodnosti.
+• Član lahko knjigo doda na seznam želja.
+• Član lahko knjigo odstrani s seznama.
+• Seznam želja je dostopen samo prijavljenemu članu.
+• Ista knjiga se na seznamu posameznega člana ne more pojaviti večkrat.
+
+H. Statistika in administracija
+
+US-36 Statistika knjižnice
+Kot administrator želim pregledati statistiko knjižnice, da imam vpogled v uporabo sistema in delovanje knjižnice.
+• Statistika prikazuje število vseh knjig in članov.
+• Prikazuje število trenutnih izposoj in rezervacij.
+• Omogoča pregled najbolj izposojanih knjig.
+• Podatki se posodabljajo glede na aktivnosti v sistemu.
+
+US-37 Varnostna kopija podatkov
+Kot administrator želim ustvariti varnostno kopijo podatkov, da lahko zaščitim podatke knjižnice pred izgubo.
+• Administrator lahko sproži izdelavo varnostne kopije.
+• Varnostna kopija vsebuje podatke o knjigah, članih in izposojah.
+• Sistem administratorja obvesti o uspešni ali neuspešni izdelavi kopije.
+
+US-38 Obnovitev podatkov
+Kot administrator želim obnoviti podatke iz varnostne kopije, da lahko povrnem delovanje sistema ob izgubi ali poškodbi podatkov.
+• Administrator lahko izbere razpoložljivo varnostno kopijo.
+• Pred obnovitvijo sistem zahteva potrditev.
+• Po uspešni obnovitvi so podatki povrnjeni v stanje izbrane varnostne kopije.
+• Sistem administratorja obvesti o uspešnosti obnovitve.
+
+US-39 Upravljanje pravic in dostopov
+Kot administrator želim upravljati pravice uporabnikov (administrator, knjižničar, član), da lahko določim, do katerih funkcionalnosti imajo posamezne vloge dostop.
+• Sistem podpira tri uporabniške vloge: administrator, knjižničar in član.
+• Vsaka vloga ima določene pravice dostopa.
+• Administrator lahko uporabniku spremeni uporabniško vlogo.
+• Uporabniki ne morejo dostopati do funkcionalnosti, za katere nimajo ustreznih pravic.
+
+I. Nastavitve uporabniškega vmesnika
+
+US-40 Temni način (Dark mode)
+Kot uporabnik želim preklopiti med svetlim in temnim načinom prikaza, da si lahko prilagodim videz sistema svojim željam.
+• Uporabnik lahko preklaplja med svetlim in temnim načinom.
+• Izbrani način se uporabi na vseh straneh sistema.
+- Izbira načina se ohrani tudi ob naslednji prijavi uporabnika.
