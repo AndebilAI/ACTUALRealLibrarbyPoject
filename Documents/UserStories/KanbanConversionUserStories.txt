@@ -1,0 +1,189 @@
+A. Upravljanje knjig
+
+US-01 Dodajanje knjig
+•	Preveri z vsemi izpolnjenimi obveznimi polji (naslov, avtor, ISBN)
+•	Preveri s praznim naslovom, praznim avtorjem in praznim ISBN (vsako posebej)
+•	Preveri z ISBN, ki že obstaja v katalogu (sistem zavrne shranjevanje in vpraša o povečanju števila izvodov)
+•	Preveri z odgovorom »da« na vprašanje o povečanju števila izvodov
+•	Preveri z odgovorom »ne« na vprašanje o povečanju števila izvodov (nič se ne shrani)
+•	Preveri z ISBN-10 in ISBN-13
+•	Preveri z ISBN, ki vsebuje presledke ali vezaje
+•	Preveri z neobveznima poljema žanr in leto prazna
+•	Preveri z naslovom z dolžino 1 znaka in 255 znaki
+•	Preveri s slovenskimi znaki (č, š, ž) v naslovu in imenu avtorja
+•	Preveri, da je nova knjiga po shranjevanju vidna v pregledu zaloge
+
+US-02 Urejanje podatkov o knjigah
+•	Preveri s spremembo vsakega posameznega polja (naslov, avtor, ISBN, žanr, leto)
+•	Preveri s spremembo ISBN v vrednost, ki že obstaja pri drugi knjigi (zavrnitev)
+•	Preveri s praznim obveznim poljem (zavrnitev)
+•	Preveri s knjigo, ki je trenutno izposojena
+•	Preveri, da se spremenjene vrednosti takoj prikažejo v pregledu in iskanju
+•	Preveri, da zgodovina izposoje po urejanju ostane nespremenjena
+•	Preveri s preklicem urejanja (podatki ostanejo kot prej)
+
+US-03 Brisanje knjig
+•	Preveri z neizposojeno knjigo in potrditvijo brisanja
+•	Preveri z neizposojeno knjigo in preklicem potrditve (knjiga ostane)
+•	Preveri s knjigo, ki je trenutno izposojena (zavrnitev z razlogom)
+•	Preveri s knjigo, ki ima aktivno rezervacijo ali čakalno listo
+•	Preveri s knjigo z zgodovino izposoje
+•	Preveri, da izbrisana knjiga ni vidna v iskanju, filtrih, pregledu zaloge in pregledu razpoložljivih knjig
+
+ B. Pregled in iskanje
+
+US-04 Pregled zaloge
+•	Preveri s praznim katalogom (prikaže se sporočilo, da ni knjig)
+•	Preveri s katalogom z manj knjigami, kot jih je na eni strani
+•	Preveri s katalogom z več knjigami, kot jih je na eni strani (razdelitev na strani)
+•	Preveri s prehodom na naslednjo, prejšnjo, prvo in zadnjo stran
+•	Preveri, da je za vsako knjigo prikazan naslov, avtor in žanr
+•	Preveri s knjigo brez žanra (prikaz brez napake)
+•	Preveri s katalogom z 10.000 knjigami (odzivnost)
+
+US-05 Pregled trenutno razpoložljivih knjig
+•	Preveri s knjigo z vsaj enim prostim izvodom (prikazana)
+•	Preveri s knjigo brez prostih izvodov (ni prikazana)
+•	Preveri z izposojo zadnjega prostega izvoda (knjiga izgine s seznama)
+•	Preveri z vračilom knjige, ki je bila zadnji izvod (knjiga se vrne na seznam)
+•	Preveri, ko ni nobene razpoložljive knjige (prikaže se sporočilo)
+
+US-06 Iskanje s filtrom
+•	Preveri z vsakim posameznim filtrom (žanr, avtor, leto, razpoložljivost)
+•	Preveri z vsemi štirimi filtri hkrati (logični »in«)
+•	Preveri s kombinacijo filtrov brez zadetkov (jasno sporočilo)
+•	Preveri s posamičnim odstranjevanjem filtrov (rezultati se sproti osvežijo)
+•	Preveri z odstranitvijo vseh filtrov (prikaže se celoten seznam)
+•	Preveri s filtrom po letu z veljavnim in neveljavnim vnosom (npr. črke)
+
+US-07 Iskanje knjig
+•	Preveri z iskanjem po naslovu in po avtorju
+•	Preveri z malimi, velikimi in mešanimi črkami
+•	Preveri z delnim nizom (»Tavč« najde »Ivan Tavčar«)
+•	Preveri z iskalnim nizom brez zadetkov (jasno sporočilo)
+•	Preveri s praznim iskalnim nizom
+•	Preveri s slovenskimi znaki (č, š, ž) in z iskanjem brez njih
+•	Preveri s posebnimi znaki in zelo dolgim nizom (brez napake)
+•	Preveri z iskalnim nizom na začetku, v sredini in na koncu besede
+
+US-08 Razvrščanje knjig
+•	Preveri z razvrščanjem po naslovu, avtorju in letu
+•	Preveri z naraščajočim in padajočim vrstnim redom
+•	Preveri z razvrščanjem rezultatov iskanja in filtriranja
+•	Preveri z naslovi, ki se začnejo s čšž (pravilno slovensko abecedno zaporedje)
+•	Preveri s knjigami brez leta (konsistentna uvrstitev na konec ali začetek)
+•	Preveri, da razvrščanje velja čez vse strani, ne le na trenutni
+
+US-09 Izbira žanra
+•	Preveri, da seznam vsebuje samo žanre z vsaj eno knjigo
+•	Preveri z izbiro žanra (prikažejo se samo knjige tega žanra)
+•	Preveri po brisanju zadnje knjige nekega žanra (žanr izgine s seznama)
+•	Preveri z dodajanjem prve knjige novega žanra (žanr se pojavi na seznamu)
+•	Preveri s katalogom brez žanrov (prazen seznam brez napake)
+
+US-10 Izbor avtorjev
+•	Preveri, da je seznam avtorjev urejen abecedno
+•	Preveri z izbiro avtorja (prikažejo se vse njegove knjige)
+•	Preveri z avtorjem z eno knjigo in z več knjigami
+•	Preveri z avtorji s slovenskimi znaki (č, š, ž) v abecednem vrstnem redu
+•	Preveri po brisanju zadnje knjige avtorja (avtor izgine s seznama)
+
+US-11 Iskanje po ISBN / črtni kodi
+•	Preveri z veljavnim ISBN-10 in ISBN-13 (vrne točno eno knjigo)
+•	Preveri z neobstoječim ISBN (razumljivo sporočilo)
+•	Preveri z ISBN z napačno kontrolno števko
+•	Preveri z ISBN z neveljavno dolžino ali znaki
+•	Preveri z vnosom ISBN z vezaji in presledki
+•	Preveri s praznim vnosom
+•	Preveri z vnosom s tipkovnico
+
+ 
+C. Izposoja
+
+US-12 Evidenca izposoje
+•	Preveri s trenutno izposojeno knjigo (prikazani knjiga, član, datum izposoje, rok vrnitve)
+•	Preveri z več izposojami istega člana
+•	Preveri z več izvodi iste knjige, izposojenimi različnim članom
+•	Preveri z vrnjeno knjigo (ni na seznamu)
+•	Preveri brez izposoj (prikaže se sporočilo)
+•	Preveri z izposojo, ki ima podaljšan rok (prikazan novi rok)
+
+US-13 Vračilo knjige
+•	Preveri z vračilom pravočasno izposojene knjige
+•	Preveri z vračilom knjige po preteku roka
+•	Preveri, da se število prostih izvodov poveča za ena
+•	Preveri, da se datum vračila zabeleži v zgodovino
+•	Preveri z vračilom knjige, ki ni izposojena (zavrnitev)
+•	Preveri z dvojnim vračilom iste izposoje (zavrnitev)
+•	Preveri z vračilom knjige s čakalno listo (opozorilo na prvega čakajočega)
+•	Preveri z vračilom knjige brez čakalne liste (brez opozorila)
+
+US-14 Pregled zamud
+•	Preveri z izposojo, ki ji je rok potekel (prikazana)
+•	Preveri z izposojo, ki ji rok še ni potekel (ni prikazana)
+•	Preveri z izposojo, ki ji rok poteče danes (ni zamuda)
+•	Preveri z izposojo, ki ji je rok potekel včeraj (zamuda 1 dan)
+•	Preveri, da je za vsako zamudo prikazano pravilno število dni
+•	Preveri z razvrstitvijo po dolžini zamude (najdaljša prva)
+•	Preveri, da zamuda izgine po vračilu knjige
+•	Preveri, da zamuda izgine po podaljšanju izposoje
+•	Preveri brez zamud (prikaže se sporočilo)
+
+US-15 Pregled zgodovine izposoje
+•	Preveri z odprtjem zgodovine iz kartice knjige
+•	Preveri z odprtjem zgodovine iz kartice člana
+•	Preveri, da vsak zapis vsebuje datum izposoje in datum vračila
+•	Preveri s trenutno izposojeno knjigo (datum vračila je prazen ali označen kot »ni vrnjeno«)
+•	Preveri s knjigo ali članom brez zgodovine (prikaže se sporočilo)
+•	Preveri z zgodovino z več kot eno stranjo zapisov
+•	Preveri, da zgodovina ostane po urejanju podatkov o knjigi
+
+US-16 Rezervacija knjige
+•	Preveri z rezervacijo trenutno zasedene knjige (uspeh in potrditev)
+•	Preveri z rezervacijo knjige s prostim izvodom (zavrnitev)
+•	Preveri z drugo rezervacijo iste knjige istega člana (zavrnitev)
+•	Preveri z rezervacijo knjige, ki jo ima član že izposojeno
+•	Preveri z rezervacijo istega naslova, ki jo naredita dva različna člana
+•	Preveri, da član prejme potrditev rezervacije
+
+US-17 Podaljšanje izposoje
+•	Preveri s podaljšanjem knjige brez rezervacije in čakalne liste
+•	Preveri s podaljšanjem knjige z rezervacijo ali čakalno listo (zavrnitev z razlogom)
+•	Preveri s prvim, drugim in tretjim podaljšanjem (tretje zavrnjeno)
+•	Preveri, da je novi rok vrnitve prikazan takoj in pravilno izračunan
+•	Preveri s podaljšanjem knjige, ki ji je rok že potekel
+•	Preveri s podaljšanjem knjige, ki ni izposojena članu (zavrnitev)
+
+US-18 Čakalna lista za zasedene knjige
+•	Preveri z uvrstitvijo na čakalno listo zasedene knjige
+•	Preveri z uvrstitvijo na čakalno listo knjige s prostim izvodom (zavrnitev)
+•	Preveri z dvema članoma, ki se prijavita v različnem času (vrstni red po času prijave)
+•	Preveri z dvema članoma, ki se prijavita istočasno (deterministični vrstni red)
+•	Preveri, da član vidi svoj položaj v vrsti
+•	Preveri, da se položaj izboljša, ko član pred njim zapusti listo
+•	Preveri z vračilom knjige (obveščen je prvi na listi)
+•	Preveri z istim članom, ki se poskuša uvrstiti dvakrat (zavrnitev)
+
+ 
+D. Člani
+
+US-19 Dodajanje novega člana
+•	Preveri z vsemi izpolnjenimi polji (ime, priimek, e-pošta, telefon)
+•	Preveri z izpolnjenimi samo obveznimi polji (ime, priimek, e-pošta)
+•	Preveri s praznim imenom, priimkom in e-pošto (vsako posebej)
+•	Preveri z veljavnimi in neveljavnimi e-poštnimi naslovi (npr. brez @ ali domene)
+•	Preveri z e-pošto, ki že obstaja (zavrnitev)
+•	Preveri z e-pošto, ki se razlikuje samo po velikih in malih črkah (obravnavana kot podvojena)
+•	Preveri, da član po vpisu dobi edinstveno številko članstva
+•	Preveri s slovenskimi znaki v imenu in priimku
+•	Preveri s telefonsko številko v različnih zapisih (+386, 040…)
+
+US-20 Brisanje člana
+•	Preveri s članom brez izposoj in zamud ter s potrditvijo brisanja
+•	Preveri s preklicem potrditve (član ostane)
+•	Preveri s članom z izposojenimi knjigami (zavrnitev z razlogom)
+•	Preveri s članom z neporavnanimi zamudami (zavrnitev z razlogom)
+•	Preveri s članom z aktivnimi rezervacijami in čakalnimi listami (po brisanju odstranjene)
+•	Preveri, da se pri odstranitvi člana s čakalne liste položaji ostalih popravijo
+•	Preveri, da zgodovina izposoje izbrisanega člana ostane v zgodovini knjige (odprto vprašanje za naročnika)
+

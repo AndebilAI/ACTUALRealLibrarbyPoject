@@ -1,0 +1,122 @@
+A. Upravljanje knjig
+
+US-01 Dodajanje knjig
+Kot knjižničar želim vnesti novo knjigo (naslov, avtor, ISBN, žanr, leto), da je v zalogi in se jo lahko izposoja.
+
+•	Knjigo je mogoče shraniti samo, če so izpolnjena obvezna polja (naslov, avtor, ISBN).
+•	Če ISBN že obstaja, sistem zavrne shranjevanje nove knjige in vpraša, če bi povečali število izvodov že obstoječe knjige.
+•	Po shranjevanju je knjiga vidna v pregledu zaloge.
+
+US-02 Urejanje podatkov o knjigah
+Kot knjižničar želim popraviti podatke o knjigi, da so podatki v katalogu točni.
+•	Spremenjene vrednosti se po shranjevanju takoj prikažejo.
+•	Veljajo ista pravila preverjanja kot pri dodajanju.
+•	Zgodovina izposoje knjige ostane nespremenjena.
+
+US-03 Brisanje knjig
+Kot knjižničar želim izbrisati knjigo, ki je ni več, da katalog ostane aktualen.
+•	Pred brisanjem sistem zahteva potrditev.
+•	Knjige, ki so trenutno izposojene, ni mogoče izbrisati; sistem pove razlog.
+•	Izbrisana knjiga se ne prikaže v iskanju in pregledih.
+
+B. Pregled in iskanje
+
+US-04 Pregled zaloge
+Kot knjižničar želim videti seznam vseh knjig, da imam pregled.
+•	Seznam prikazuje naslov, avtorja, in žanr.
+•	Daljši seznam je razdeljen na strani.
+
+US-05 Pregled trenutno razpoložljivih knjig
+Kot član želim videti samo knjige, ki so zdaj na voljo, da vem, kaj lahko takoj izposodim.
+•	Prikažejo se samo knjige z vsaj enim prostim izvodom.
+•	Ob izposoji zadnjega izvoda knjiga iz seznama izgine.
+
+
+US-06 Iskanje s filtrom
+Kot član želim omejiti rezultate z enim ali več filtri (žanr, avtor, leto, razpoložljivost), da hitreje najdem ustrezno knjigo.
+•	Več filtrov hkrati se združuje (logični »in«).
+•	Če ni zadetkov, sistem to jasno sporoči.
+•	Filtre je mogoče posamično odstraniti.
+
+US-07 Iskanje knjig
+Kot član želim vpisati iskalni niz in najti knjige po naslovu ali avtorju, da ne rabim brskati po celotnem seznamu.
+•	Iskanje ne razlikuje velikih in malih črk.
+•	Delujejo delni ujemi (npr. »Tavč« najde »Ivan Tavčar«).
+
+US-08 Razvrščanje knjig
+Kot član želim razvrstiti seznam knjig po naslovu, avtorju ali letu, da lažje pregledam rezultate.
+•	Razvrščanje je mogoče naraščajoče in padajoče.
+•	Razvrščanje deluje tudi na rezultatih iskanja in filtriranja.
+
+US-09 Izbira žanra
+Kot član želim izbrati žanr z vnaprej določenega seznama, da vidim samo knjige tega žanra.
+•	Seznam žanrov vsebuje samo žanre, ki imajo vsaj eno knjigo.
+•	Izbira žanra prikaže pripadajoče knjige.
+
+US-10 Izbor avtorjev
+Kot član želim izbrati avtorja s seznama, da vidim vsa njegova dela v knjižnici.
+•	Seznam avtorjev je urejen abecedno.
+•	Izbira avtorja prikaže vse njegove knjige.
+
+US-11 Iskanje po ISBN / črtni kodi
+Kot knjižničar želim najti knjigo z vnosom ali skeniranjem ISBN, da hitro obdelam izposojo ali vračilo.
+•	Veljaven ISBN vrne točno eno knjigo.
+•	Neveljaven ali neobstoječ ISBN sproži razumljivo sporočilo o napaki.
+•	Iskanje deluje z vnosom s tipkovnice.
+
+ C. Izposoja
+
+US-12 Evidenca izposoje
+Kot knjižničar želim videti seznam trenutno izposojenih knjig z izposojevalcem in rokom vrnitve, da vem, kje so.
+•	Seznam prikazuje knjigo, člana, datum izposoje in rok vrnitve.
+•	Vrnjene knjige se na seznamu ne prikažejo.
+
+US-13 Vračilo knjige
+Kot knjižničar želim označiti knjigo kot vrnjeno, da je spet na voljo.
+•	Po vračilu se število prostih izvodov poveča za ena.
+•	Datum vračila se zabeleži v zgodovino.
+•	Če za knjigo obstaja čakalna lista, sistem opozori na prvega čakajočega.
+
+US-14 Pregled zamud
+Kot knjižničar želim videti knjige, ki jim je potekel rok vrnitve, da lahko člane opomnim.
+•	Prikažejo se samo izposoje s potečenim rokom.
+•	Za vsako zamudo je prikazano število dni zamude.
+•	Seznam je razvrščen po dolžini zamude.
+
+US-15 Pregled zgodovine izposoje
+Kot knjižničar želim videti zgodovino izposoje za izbrano knjigo ali izbranega uporabnika, da lahko preverim pretekle izposoje.
+•	Zgodovino je mogoče odpreti iz kartice knjige ali kartice člana.
+•	Vsak zapis vsebuje datum izposoje in datum vračila.
+
+US-16 Rezervacija knjige
+Kot član želim rezervirati knjigo, da mi je zagotovljena, ko bo na voljo.
+•	Rezervacija je mogoča samo za knjigo, ki je trenutno zasedena.
+•	Član ne more imeti dveh aktivnih rezervacij za isto knjigo.
+•	Ob rezervaciji član prejme potrditev.
+
+US-17 Podaljšanje izposoje
+Kot član želim podaljšati rok izposoje, da knjige ne rabim vračati, če je še nisem prebral.
+•	Podaljšanje je mogoče, samo če za knjigo ni rezervacije ali čakalne liste.
+•	Število podaljšanj je omejeno (npr. največ 2).
+•	Novi rok vrnitve je prikazan takoj.
+
+US-18 Čakalna lista za zasedene knjige
+Kot član želim biti uvrščen na čakalno listo zasedene knjige, da jo dobim po vrstnem redu prijave.
+•	Vrstni red na listi je določen po času prijave.
+•	Član vidi svoj položaj v vrsti.
+•	Ob vrnitvi knjige je obveščen prvi na listi.
+
+D. Člani
+
+US-19 Dodajanje novega člana
+Kot knjižničar želim vpisati novega člana (ime, priimek, e-pošta, telefon), da si lahko izposoja knjige.
+•	Obvezna polja so ime, priimek in e-pošta.
+•	E-poštni naslov mora biti veljaven in edinstven.
+•	Po vpisu član dobi številko članstva.
+
+US-20 Brisanje člana
+Kot knjižničar želim izbrisati člana, ki ni več aktiven, da je evidenca urejena.
+•	Pred brisanjem sistem zahteva potrditev.
+•	Člana z izposojenimi knjigami ali neporavnanimi zamudami ni mogoče izbrisati.
+•	Čakalne liste in rezervacije izbrisanega člana se odstranijo.
+
