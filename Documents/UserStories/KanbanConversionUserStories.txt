@@ -187,3 +187,205 @@ US-20 Brisanje člana
 •	Preveri, da se pri odstranitvi člana s čakalne liste položaji ostalih popravijo
 •	Preveri, da zgodovina izposoje izbrisanega člana ostane v zgodovini knjige (odprto vprašanje za naročnika)
 
+US-21 Razvrščanje priljubljenih knjig
+• Preveri z več knjigami z različnim številom izposoj (pravilno zaporedje po priljubljenosti)
+• Preveri z dvema knjigama z enakim številom izposoj (konsistenten vrstni red)
+• Preveri s knjigo, ki še ni bila izposojena (uvrstitev na konec seznama)
+• Preveri, da so knjige razvrščene od najbolj do najmanj priljubljenih
+• Preveri, da se vrstni red posodobi po novi izposoji knjige
+• Preveri, da se vrstni red posodobi tudi po vračilu knjige, če se število izposoj ne spremeni
+
+US-22 Urejanje podatkov člana
+• Preveri s spremembo imena in priimka člana
+• Preveri s spremembo e-poštnega naslova in telefonske številke
+• Preveri s spremembo vseh podatkov hkrati
+• Preveri z neveljavnim e-poštnim naslovom (zavrnitev shranjevanja)
+• Preveri z e-poštnim naslovom, ki že pripada drugemu članu (zavrnitev)
+• Preveri s praznim obveznim poljem (zavrnitev)
+• Preveri, da se spremembe po shranjevanju prikažejo v evidenci članov
+• Preveri s preklicem urejanja (podatki ostanejo nespremenjeni)
+
+US-23 Iskanje člana
+• Preveri z iskanjem po imenu, priimku in e-poštnem naslovu
+• Preveri z iskanjem po delnem imenu ali priimku
+• Preveri z malimi, velikimi in mešanimi črkami
+• Preveri z iskalnim nizom, ki vrne več članov
+• Preveri z iskalnim nizom brez zadetkov (jasno sporočilo)
+• Preveri s praznim iskalnim nizom
+• Preveri z e-poštnim naslovom, ki vsebuje posebne znake
+
+E. Uporabniški računi in avtentikacija
+
+US-24 Registracija novega uporabnika
+• Preveri z vsemi izpolnjenimi obveznimi polji (ime, priimek, e-pošta, geslo)
+• Preveri s praznim imenom, priimkom, e-pošto in geslom (vsako posebej)
+• Preveri z veljavnim in neveljavnim e-poštnim naslovom
+• Preveri z e-poštnim naslovom, ki že obstaja v sistemu (zavrnitev)
+• Preveri z geslom, ki ne izpolnjuje zahtev sistema (zavrnitev)
+• Preveri z geslom in potrditvijo gesla, ki se ne ujemata (če sistem zahteva potrditev)
+• Preveri, da se po uspešni registraciji uporabniku prikaže potrditev
+• Preveri, da se novi uporabnik lahko prijavi z ustvarjenim računom
+
+US-25 Pregled lastnega računa
+• Preveri, da član vidi svoje pravilne osebne podatke
+• Preveri s članom, ki ima trenutno izposojene knjige (prikaz vseh aktivnih izposoj)
+• Preveri s članom, ki ima aktivne rezervacije (prikaz rezervacij)
+• Preveri s članom, ki ima pretekle izposoje (prikaz zgodovine)
+• Preveri s članom brez izposoj in rezervacij (ustrezno sporočilo)
+• Preveri, da član ne more videti osebnih podatkov drugega člana
+• Preveri, da se podatki računa pravilno prikažejo po ponovni prijavi
+
+US-26 Prijava in odjava uporabnika
+• Preveri s pravilnim e-poštnim naslovom in geslom (uspešna prijava)
+• Preveri z napačnim geslom (zavrnitev prijave)
+• Preveri z neobstoječim e-poštnim naslovom (zavrnitev prijave)
+• Preveri s praznim e-poštnim naslovom ali geslom (opozorilo)
+• Preveri s prijavo uporabnikov z različnimi vlogami (ustrezne pravice dostopa)
+• Preveri z odjavo uporabnika (aktivna seja se zaključi)
+• Preveri, da po odjavi uporabnik ne more dostopati do zaščitenih strani brez ponovne prijave
+• Preveri, da se po odjavi in ponovni prijavi dostop ponovno omogoči
+
+US-27 Ponastavitev gesla
+• Preveri z e-poštnim naslovom, ki je povezan z obstoječim računom
+• Preveri z e-poštnim naslovom, ki ni povezan z nobenim računom
+• Preveri s praznim ali neveljavnim e-poštnim naslovom
+• Preveri, da sistem pošlje povezavo za ponastavitev gesla
+• Preveri z uporabo veljavne povezave (omogočena ponastavitev gesla)
+• Preveri z uporabo povezave po poteku njene veljavnosti (zavrnitev)
+• Preveri z uporabo že uporabljene povezave (zavrnitev)
+• Preveri, da se je po uspešni ponastavitvi mogoče prijaviti z novim geslom
+• Preveri, da prijava s starim geslom po ponastavitvi ni več mogoča
+
+F. Obveščanje in komunikacija
+
+US-28 Obvestilo o zamudi
+• Preveri z izposojo, ki ji je potekel rok vračila (pošlje se obvestilo)
+• Preveri z izposojo, ki ji rok še ni potekel (obvestilo se ne pošlje)
+• Preveri z izposojo, ki je bila vrnjena pred potekom roka (obvestilo se ne pošlje)
+• Preveri, da obvestilo vsebuje pravilen naslov knjige in datum poteka roka
+• Preveri, da je obvestilo poslano na pravilen e-poštni naslov člana
+• Preveri, da član z več zamujenimi knjigami prejme ustrezna obvestila
+• Preveri, da sistem istega obvestila ne pošlje večkrat za isto zamudo
+
+US-29 Komunikacija z administratorjem
+• Preveri s pošiljanjem sporočila z izpolnjeno zadevo in vsebino
+• Preveri s prazno zadevo (zavrnitev ali opozorilo)
+• Preveri s prazno vsebino sporočila (zavrnitev ali opozorilo)
+• Preveri z zelo dolgim sporočilom in posebnimi znaki
+• Preveri, da se uspešno poslano sporočilo prikaže administratorju
+• Preveri, da administrator lahko odpre in prebere prejeto sporočilo
+• Preveri, da član po uspešnem pošiljanju prejme potrditev
+• Preveri ob napaki pri pošiljanju sporočila (ustrezno obvestilo)
+
+US-30 Samodejno opozorilo pred iztekom roka
+• Preveri z aktivno izposojo, ki ji rok poteče čez dva dni (pošlje se opozorilo)
+• Preveri z izposojo, ki ji rok poteče danes (opozorilo se ne pošlje, če je predvideno dva dni prej)
+• Preveri z izposojo, ki ji rok poteče čez več kot dva dni (opozorilo se še ne pošlje)
+• Preveri z izposojo, ki je bila že vrnjena (opozorilo se ne pošlje)
+• Preveri, da opozorilo vsebuje pravilen naslov knjige in datum vračila
+• Preveri, da je opozorilo poslano na pravilen e-poštni naslov člana
+• Preveri, da sistem za isto izposojo ne pošlje več enakih opozoril
+
+G. Priporočila in interakcija s knjigami
+
+US-31 Sistemska priporočila za knjige
+• Preveri z uporabnikom, za katerega obstajajo podatki o ocenah in izposojah (prikažejo se priporočila)
+• Preveri, da priporočila upoštevajo ocene in izposoje uporabnikov s podobnimi interesi
+• Preveri, da se priporočila prikažejo na uporabniški strani
+• Preveri, da je mogoče odpreti podrobnosti priporočene knjige
+• Preveri, da priporočene knjige obstajajo v katalogu
+• Preveri z uporabnikom brez zgodovine izposoj ali ocen (ustrezno sporočilo)
+• Preveri, da se priporočila posodobijo ob novih ocenah ali izposojah
+
+US-32 Obveščanje o novicah
+• Preveri, da se prikažejo vse objavljene novice
+• Preveri, da vsaka novica vsebuje naslov, vsebino in datum objave
+• Preveri z odpiranjem posamezne novice (prikaže se pravilna vsebina)
+• Preveri z novico z daljšo vsebino in slovenskimi znaki
+• Preveri, da se neobjavljene novice ne prikažejo članom
+• Preveri, da član prejme obvestilo ob objavi nove novice
+• Preveri, da se starejše novice še vedno lahko odprejo in preberejo
+
+US-33 Puščanje kritike pri izposojenih knjigah
+• Preveri z oddajo kritike za knjigo, ki si jo je član izposodil
+• Preveri z oddajo kritike za knjigo, ki si je član še ni izposodil (zavrnitev)
+• Preveri z oddajo prazne kritike (zavrnitev ali opozorilo)
+• Preveri z oddajo kritike z daljšim besedilom in posebnimi znaki
+• Preveri, da je kritika povezana s pravilno knjigo in članom
+• Preveri z urejanjem že oddane kritike
+• Preveri z brisanjem lastne kritike
+• Preveri, da so oddane kritike vidne drugim članom
+• Preveri, da član ne more urejati ali brisati kritike drugega člana
+
+US-34 Ocenjevanje izposojenih knjig
+• Preveri z oddajo ocene za knjigo, ki si jo je član izposodil
+• Preveri z oddajo ocene za knjigo, ki si je član še ni izposodil (zavrnitev)
+• Preveri z najnižjo in najvišjo dovoljeno oceno (npr. 1 in 5)
+• Preveri z oceno zunaj dovoljene lestvice (zavrnitev)
+• Preveri s prazno oceno (zavrnitev)
+• Preveri s spremembo že oddane ocene
+• Preveri, da se povprečna ocena knjige pravilno preračuna po novi oceni
+• Preveri, da se povprečna ocena pravilno posodobi po spremembi ocene
+
+US-35 Osebni seznam želja (wishlist)
+• Preveri z dodajanjem knjige na osebni seznam želja
+• Preveri z dodajanjem iste knjige večkrat (podvojitev je preprečena)
+• Preveri z odstranjevanjem knjige s seznama želja
+• Preveri z dodajanjem več različnih knjig na seznam
+• Preveri, da član vidi samo svoj seznam želja
+• Preveri, da seznam želja ni dostopen neprijavljenemu uporabniku
+• Preveri z odpiranjem seznama po odjavi in ponovni prijavi (vsebina ostane shranjena)
+• Preveri z dodajanjem knjige, ki je bila pozneje odstranjena iz kataloga
+
+H. Statistika in administracija
+
+US-36 Statistika knjižnice
+• Preveri s knjižnico z znanim številom knjig in članov (pravilni podatki)
+• Preveri, da je prikazano pravilno število trenutnih izposoj
+• Preveri, da je prikazano pravilno število aktivnih rezervacij
+• Preveri, da so najbolj izposojane knjige razvrščene po številu izposoj
+• Preveri, da se statistika posodobi po novi izposoji
+• Preveri, da se statistika posodobi po vračilu knjige
+• Preveri s prazno knjižnico (prikaz ničelnih vrednosti brez napake)
+• Preveri, da do statistike lahko dostopa samo administrator
+
+US-37 Varnostna kopija podatkov
+• Preveri z ročnim sprožanjem izdelave varnostne kopije
+• Preveri, da varnostna kopija vsebuje podatke o knjigah, članih in izposojah
+• Preveri z izdelavo kopije ob večji količini podatkov
+• Preveri, da sistem po uspešni izdelavi prikaže potrditev
+• Preveri ob neuspešni izdelavi kopije (prikaže se ustrezno sporočilo)
+• Preveri, da je izdelano varnostno kopijo mogoče najti med razpoložljivimi kopijami
+• Preveri, da izdelavo varnostne kopije lahko sproži samo administrator
+
+US-38 Obnovitev podatkov
+• Preveri z izbiro obstoječe varnostne kopije in potrditvijo obnovitve
+• Preveri s preklicem potrditve (obnovitev se ne izvede)
+• Preveri z izbiro neobstoječe ali nedostopne varnostne kopije (zavrnitev)
+• Preveri, da se po obnovitvi podatki o knjigah povrnejo v stanje izbrane kopije
+• Preveri, da se po obnovitvi podatki o članih povrnejo v stanje izbrane kopije
+• Preveri, da se po obnovitvi podatki o izposojah povrnejo v stanje izbrane kopije
+• Preveri, da sistem po uspešni obnovitvi prikaže potrditev
+• Preveri ob neuspešni obnovitvi (prikaže se ustrezno sporočilo)
+• Preveri, da lahko obnovitev podatkov izvede samo administrator
+
+US-39 Upravljanje pravic in dostopov
+• Preveri, da sistem podpira vloge administratorja, knjižničarja in člana
+• Preveri s prijavo administratorja (dostop do administratorskih funkcionalnosti)
+• Preveri s prijavo knjižničarja (dostop samo do dovoljenih funkcionalnosti)
+• Preveri s prijavo člana (dostop samo do članskih funkcionalnosti)
+• Preveri s poskusom dostopa do nedovoljene funkcionalnosti (dostop zavrnjen)
+• Preveri s spremembo uporabniške vloge (nove pravice se pravilno uporabijo)
+• Preveri, da uporabnik ne more sam spremeniti svoje vloge
+• Preveri, da lahko uporabniške vloge spreminja samo administrator
+
+I. Nastavitve uporabniškega vmesnika
+
+US-40 Temni način (Dark mode)
+• Preveri s preklopom iz svetlega v temni način
+• Preveri s preklopom iz temnega v svetli način
+• Preveri, da se izbrani način pravilno uporabi na vseh straneh sistema
+• Preveri, da so besedilo, ozadje in drugi elementi v obeh načinih pravilno vidni
+• Preveri, da se izbrani način ohrani ob prehodu med različnimi stranmi
+• Preveri, da se izbrani način ohrani po odjavi in ponovni prijavi
+• Preveri, da se ob prvi prijavi uporabi privzeti način prikaza
